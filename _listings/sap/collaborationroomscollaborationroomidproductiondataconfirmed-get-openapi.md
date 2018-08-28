@@ -1,15 +1,15 @@
+---
 swagger: "2.0"
 x-collection-name: SAP
-x-complete: 1
+x-complete: 0
 info:
-  title: SAP Translation Hub
-  description: to-provide-users-of-software-in-a-global-market-with-texts-in-their-own-language-translations-are-required--sap-translation-hub-enables-you-to-draw-on-saps-translation-experience-across-multiple-products-and-languages-to-propose-translations-for-short-texts-
-  contact:
-    name: SAP Translation Hub team
-    email: translationhub@sap.com
+  title: SAP Manufacturing Network Customer APIs Retrieves the confirmed production
+    option
+  description: Retrieves the production option confirmed as the finalized production
+    requirements, and the initial pricing for it.
   version: 1.0.0
-host: sandbox.api.sap.com
-basePath: /translationhub/api/v1
+host: hostname
+basePath: /dim/api
 schemes:
 - http
 produces:
@@ -207,48 +207,17 @@ paths:
       - Confirmed
       - Production
       - Option
-  /collaborationRooms/{collaborationRoomId}/productionData/{productionDataId}/confirm:
-    post:
-      summary: Confirms a production option
-      description: "Confirms a production option along with the initial pricing for
-        it.  \nThe production option might be proposed by the customer or the additive
-        manufacturing supplier.   \nThe login user must be from the customer."
-      operationId: confirms-a-production-option-along-with-the-initial-pricing-for-it--the-production-option-might-be-p
-      x-api-path-slug: collaborationroomscollaborationroomidproductiondataproductiondataidconfirm-post
-      parameters:
-      - in: path
-        name: collaborationRoomId
-        description: The ID of a collaboration room
-      - in: path
-        name: productionDataId
-        description: The ID of a production option
-      responses:
-        200:
-          description: Successful response
-      tags:
-      - Confirms
-      - Production
-      - Option
-  /collaborationRooms/{collaborationRoomId}/productionData/{productionDataId}/cancelConfirm:
-    post:
-      summary: Cancels the confirmation of a production option
-      description: "Undos the confirmation of a production option.  \nThe login user
-        must be from the customer."
-      operationId: undos-the-confirmation-of-a-production-option--the-login-user-must-be-from-the-customer
-      x-api-path-slug: collaborationroomscollaborationroomidproductiondataproductiondataidcancelconfirm-post
-      parameters:
-      - in: path
-        name: collaborationRoomId
-        description: The ID of a collaboration room
-      - in: path
-        name: productionDataId
-        description: The ID of a production option
-      responses:
-        200:
-          description: Successful response
-      tags:
-      - Cancels
-      - Confirmation
-      - Of
-      - Production
-      - Option
+x-streamrank:
+  polling_total_time_average: 0
+  polling_size_download_average: 0
+  streaming_total_time_average: 0
+  streaming_size_download_average: 0
+  change_yes: 0
+  change_no: 0
+  time_percentage: 0
+  size_percentage: 0
+  change_percentage: 0
+  last_run: ""
+  days_run: 0
+  minute_run: 0
+---
